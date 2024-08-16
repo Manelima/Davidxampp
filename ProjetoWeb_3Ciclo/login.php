@@ -5,7 +5,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host   = "localhost";
     $bd     = "testes_01";
     $user   = "root";
+<<<<<<< HEAD
     $pass   = "";
+=======
+    $pass   = "admin";
+>>>>>>> 25af072938d7eaa835cccb29179a15130ca25fb2
 
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$bd", $user, $pass);
@@ -286,4 +290,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </html>';
 }
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 25af072938d7eaa835cccb29179a15130ca25fb2

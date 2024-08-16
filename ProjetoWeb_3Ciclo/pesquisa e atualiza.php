@@ -1,4 +1,8 @@
 <?php 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 25af072938d7eaa835cccb29179a15130ca25fb2
     $nome = $telefone = $email = $senha = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -6,7 +10,11 @@
         $host 	= "localhost";
         $bd 	= "testes_01";
         $user 	= "root";
+<<<<<<< HEAD
         $pass 	= "";
+=======
+        $pass 	= "admin";
+>>>>>>> 25af072938d7eaa835cccb29179a15130ca25fb2
     
         try {
             $pdo = new PDO("mysql:host=$host;dbname=$bd", $user, $pass);
@@ -38,6 +46,7 @@
         }
     }    
 ?>
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -89,4 +98,45 @@
         
         <?php } ?>
     </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa e Atualizção Cadastral</title>
+</head>
+<body>
+    <h2>Atualizar cadastro</h2>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <p>
+            ID: <input type="text" name="id">
+            <input type="submit" value="pesquisar">
+        </p>
+    </form>
+    <br>
+<hr>
+    <?php  if(!empty($nome)){ ?>
+
+    <form method="post" action="atualiza.php">
+        <input type="hidden" name="id" value="<?php  echo $id; ?>">
+        <p>
+            Nome: <br><input type="text" name="nome" value="<?php  echo $nome; ?>">
+        </p>
+        <p>
+            Telefone: <br><input type="number" name="telefone" value="<?php  echo $telefone; ?>">
+        </p>
+        <p>
+            E-mail: <br><input type="email" name="email" value="<?php  echo $email; ?>">
+        </p>
+        <p>
+            Senha: <br><input type="password" name="senha" value="<?php  echo $senha; ?>">
+        </p>
+        <p>
+            <input type="submit" value="Atualizar cadastro">
+        </p>
+    </form>
+    <?php } ?>
+</body>
+>>>>>>> 25af072938d7eaa835cccb29179a15130ca25fb2
 </html>
